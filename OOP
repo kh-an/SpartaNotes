@@ -1,0 +1,11 @@
+what led to the development of OOP?
+  - first half of 20th Century, data and the code had a clear division. Known as procedural programming
+  - more complex programs led to problems of procedual programming being highlighted
+  
+problems with procedural programming 
+- data seperated from funcs
+- lack of modularity
+- high coupling 
+- re-use difficult 
+- not modelling the real world
+
