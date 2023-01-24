@@ -13,7 +13,7 @@
 ### **Personal Information:**
 
 <!-- Any image aligned to the right. Beware the width -->
-<img width="50%" align="right" alt="Github" src="Images/DevOps_tools.png" />
+
 
 - :round_pushpin: **London** Based
 - :date: **Start of Training** : **09/01/2023**
