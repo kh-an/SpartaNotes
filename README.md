@@ -17,7 +17,6 @@
 
 - :round_pushpin: **London** Based
 - :date: **Start of Training** : **09/01/2023**
-- :calendar: **End of Training** : **28/06/2020**
 - :cyclone: **Junior Data Engineer**
 - :trophy: Computer Science Graduate
 - :notebook: [**Training Notes**](/Notes)
@@ -28,7 +27,6 @@
 &nbsp;
 
 <!-- Any image aligned to the right. Beware the width -->
-<img width="50%" align="right" alt="Github" src="Images/CICD_DevOps_Journey.png" />
 
 ### **Course Road Map:**
 - [x] **Week One** - Business Week
