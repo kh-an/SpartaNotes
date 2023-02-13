@@ -23,7 +23,7 @@ def create_pilot_list(pilots, characters_dict):
 
 
 def insert_starships(starships, characters_collection, starships_collection):
-    characters_dict = {character["url"]: character for character in characters_collection.find()}
+    characters_dict = create_characters_dict(characters_collection)
     for starship in starships:
         pilots = create_pilot_list(starship.get("pilots", []), characters_dict)
         starship["pilots"] = [characters_collection.find_one({"url": pilot["url"]})["_id"] for pilot in pilots]
@@ -32,9 +32,13 @@ def insert_starships(starships, characters_collection, starships_collection):
 def create_characters_dict(characters_collection):
     characters_dict = {}
     for character in characters_collection.find():
-        if "url" in character:
+        try:
             characters_dict[character["url"]] = character
+        except KeyError:
+            # Handle the case where the "url" key is missing
+            pass
     return characters_dict
+
 
 
 # Connect to the MongoDB database
@@ -53,3 +57,4 @@ insert_starships(starships, characters_collection, starships_collection)
 
 # Verify the data has been inserted
 print("Number of starships:", starships_collection.count_documents({}))
+
