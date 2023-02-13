@@ -26,7 +26,7 @@ def insert_starships(starships, characters_collection, starships_collection):
     characters_dict = create_characters_dict(characters_collection)
     for starship in starships:
         pilots = create_pilot_list(starship.get("pilots", []), characters_dict)
-        starship["pilots"] = [characters_collection.find_one({"url": pilot["url"]})["_id"] for pilot in pilots]
+        starship["pilots"] = [pilot["name"] for pilot in pilots]
         starships_collection.insert_one(starship)
 
 def create_characters_dict(characters_collection):
@@ -57,4 +57,3 @@ insert_starships(starships, characters_collection, starships_collection)
 
 # Verify the data has been inserted
 print("Number of starships:", starships_collection.count_documents({}))
-
